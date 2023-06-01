@@ -1,49 +1,49 @@
 //Exercise 1
 
-// class Person {
-//     constructor(name, pets, residence, hobbies) {
-//         this.name = name;
-//         this.pets = pets;
-//         this.residence = residence;
-//         this.hobbies = hobbies;
-//     }
+class Person {
+    constructor(name, pets, residence, hobbies) {
+        this.name = name;
+        this.pets = pets;
+        this.residence = residence;
+        this.hobbies = hobbies;
+    }
 
-//     addHobby(hobby) {
-//         this.hobbies.push(hobby);
-//     }
+    addHobby(hobby) {
+        this.hobbies.push(hobby);
+    }
 //     //going to push it to the last item in the hobbies list
 
-    // removeHobby(hobby) {
-    //     let foundIdx = this.hobbies.indexOf(hobby);
+    removeHobby(hobby) {
+        let foundIdx = this.hobbies.indexOf(hobby);
 
-    //     //collect all values before value (found index)
-    //     //collect all values after value
-    //     //update hobbies
-    //     let valuesBefore = this.hobbies.slice(0, foundIdx);
-    //     let valuesAfter = this.hobbies.slice(foundIdx + 1);
-    //     this.hobbies = valuesBefore.concat(valuesAfter);
-    // }
+        //collect all values before value (found index)
+        //collect all values after value
+        //update hobbies
+        let valuesBefore = this.hobbies.slice(0, foundIdx);
+        let valuesAfter = this.hobbies.slice(foundIdx + 1);
+        this.hobbies = valuesBefore.concat(valuesAfter);
+    }
 
     //if it doesn't find a value, does it return null (undefined?), or does it return an empty array, depending on what it returns drastically determines whether this will work or not
 //or use filter method (creates a new array), returns a value that coerces to true to keep the item or false to exclude or filter it out (return false
 // //**remember that it returns a new array, so if you want to update hobbies I need to reassign the returned array back to hobbbies
-//     removeHobby(rmHobby) {
-//     this.hobbies = this.hobbies.filter((hobby) => hobby != rmHobby);
+    removeHobby(rmHobby) {
+    this.hobbies = this.hobbies.filter((hobby) => hobby != rmHobby);
 //     //iterate through every hobby in my hobbies list, if it equals the removeHobby list that returns false (filters it out) returns a new array that we can asign to this.hobbies
 //     //if has duplicate hobbies will remove duplicate (does one better than the above foundIdx)
-// }
+}
 //it returns a new array, so if I want to update hobbies I need to reassign the returned array back to hobbies
 
 
-//     greeting() { 
-//         console.log("Hello fellow person!");
-//     }
+    greeting() { 
+        console.log("Hello fellow person!");
+    }
 
 // //override the Object.prototype.toString
 //     toString()) {
         
 //     }
-// }; 
+}; 
 
 
 //or
@@ -56,31 +56,31 @@
 
 //Exercise 2
 
-// class Coder extends Person {
-//     constructor(name, pets, residence, hobbies, occupation) {
-//         super(name, pets, residence, hobbies) 
+class Coder extends Person {
+    constructor(name, pets, residence, hobbies, occupation) {
+        super(name, pets, residence, hobbies) 
 
-//             this.occupation = occupation
-//     }
+            this.occupation = occupation
+    }
 
-//     greeting() {
-//         console.log("Hello, fellow coder!");
-//     }
-// };
+    greeting() {
+        console.log("Hello, fellow coder!");
+    }
+};
 
 
 //Exercise 3
 
-// let coder = new Coder("Caitlin", 1, "Chicago", ["Hiking", "Swimming"], "Full Stack Web Developer");
+let coder = new Coder("Caitlin", 1, "Chicago", ["Hiking", "Swimming"], "Full Stack Web Developer");
 
-// coder.addHobby("Fencing");
+coder.addHobby("Fencing");
 
-// console.log(coder);
+console.log(coder);
 
-// coder.removeHobby("Swimming");
+coder.removeHobby("Swimming");
 
-// // let coderName = new Coder("Lucy", 0, "Chicago", ["Running", "Playing"]);
-// console.log(coder);
+// let coderName = new Coder("Lucy", 0, "Chicago", ["Running", "Playing"]);
+console.log(coder);
 
 
 //Exercise 4
